@@ -1,12 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 
-/**
- *
- * @author admin
- */
 //insertion in table
  import java.sql.*;
 import java.io.*;
@@ -25,7 +17,7 @@ class Combined
 
    try
      {
-         //jdbc:mysql://localhost:3306/mysql?zeroDateTimeBehavior=CONVERT_TO_NULL
+        
   	 Class.forName("com.mysql.cj.jdbc.Driver");
    	con=DriverManager.getConnection("Jdbc:mysql://localhost:3306/db","root","password");
   	query="insert into customerdb values(?,?,?,?,?)";
@@ -36,20 +28,20 @@ class Combined
         System.out.print("enter pin:");
          int  en= sc.nextInt();
          
-  	//int en=Integer.parseInt(System.console().readLine("PIN No. ="));
+  
         
         System.out.print("CUSTOMER NAME :");
    	String name=sc.nextLine();
         
-               // System.console().readLine("CUSTOMER NAME =");
+               
         System.out.print("ACCOUNT BALANCE =");       
 	int s=sc.nextInt();
-//Integer.parseInt(System.console().readLine("ACCOUNT BALANCE ="));
+
  System.out.print(" password =");      
   	String c=sc.nextLine();
                 //System.console().readLine("PASSWORD =");
         
-  	//setting values to placeholders
+  	
       
 	pmt.setInt(1,en);
       	pmt.setString(2,name);
@@ -98,7 +90,7 @@ try
     int en=sc.nextInt();
    
      System.out.println("PASSWORD =");
-   // String p=sc.nextLine();
+  
        String p="";
               try {
                   p = br.readLine();
@@ -151,8 +143,7 @@ try
            int en=sc.nextInt();
          System.out.print("ENTER AMOUNT TO DEPOSIT =");
 	int m=sc.nextInt();
-        //int en=Integer.parseInt(System.console().readLine("PIN No. ="));
-        //Integer.parseInt(System.console().readLine("ENTER AMOUNT TO DEPOSIT ="));
+       
 
 	//setting values to place holders
 
@@ -239,9 +230,7 @@ try
 	query = "update customerdb set balance=balance-? where pin= ? and password =?";// here ? is to putany value
 	pmt=con.prepareStatement(query);
 
-	/*int en=Integer.parseInt(System.console().readLine("PIN No. ="));
-	String p=System.console().readLine("PASSWORD =");
-	int m=Integer.parseInt(System.console().readLine("ENTER AMOUNT TO WITHDRAW="));*/
+	
 	//setting values to place holders
         System.out.print(" ENTER PIN No. =");
            int en=sc.nextInt();
@@ -319,7 +308,7 @@ void aboutus()
 {
   System.out.println("\t\tWELCOME TO XYZ BANK");
   System.out.println("\t\t has following features :/n DEPOSIT /n WITHDRAW /n UPDATE /INFO ");
- // System.out.println("\n\n\t\tBOARD MEMBERS\n\t\t-------------\n\t\tSHUBHRANSHU DWIVEDI\n\t\tPRATYUSH KAUSHIK\n\t\tPIYUSH MISHRA\n\n");
+ 
 }
 
 
@@ -400,7 +389,7 @@ void contact()
 		}
     	System.out.println("\n\nENTER 1 TO REPEAT PROCEDURE ELSE ENTER 0\n\nTHANK YOU! \n");
    
-  	//chc=Integer.parseInt(System.console().readLine("choice ="));
+  	
          System.out.print("choice =");
          chc=sc.nextInt();
  
